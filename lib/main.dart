@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
 
-const request = "https://api.hgbrasil.com/finance?format=json&key=e7fbb4fe";
+const request = "https://api.hgbrasil.com/finance?format=json";
 
 void main() async {
   runApp(MaterialApp(
@@ -153,7 +153,7 @@ Widget buildTextField(String label, String prefix, TextEditingController c, Func
         color: Colors.black, fontSize: 24.0
     ),
     onChanged: f,
-    keyboardType: TextInputType.number,
+    keyboardType: TextInputType.numberWithOptions(decimal: true),
   );
 }
 
